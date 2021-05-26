@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Sux Clothing</title>
+
+    <script type="module">
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <link rel="stylesheet" href="/style.css">
+    <!-- <link rel="stylesheet" href="/assets/css/print.css" media="print"> -->
+
+    <meta name="description" content="Page description">
+    <meta property="og:title" content="Sux Clothing">
+    <meta property="og:description" content="Official Last Place Club">
+    <meta property="og:image" content="https://www.mywebsite.com/image.jpg">
+    <meta property="og:image:alt" content="Image description">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="og:url" content="https://www.mywebsite.com/page">
+    <link rel="canonical" href="https://www.mywebsite.com/page">
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/my.webmanifest">
+    <meta name="theme-color" content="#FF00FF">
+</head>
+
+<body>
+    <!-- Content -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+
+        <rect x="45" y="45" width="10" height="10" id="empty_rect"
+          style="stroke: none; fill:none;"/>
+
+        <polygon id="empty_polygon" points="45,45 45,55 55,55 55,45" style="stroke: #000000; fill:none;"/>
+        
+        <!-- Coit Tower -->
+        <g class="building" >
+            <mask id="myMask">
+                <!-- Everything under a black pixel will be invisible -->
+                <rect x="81" y="35" width="8", height="5" fill="white" />
+                <rect x="82" y="38" width="1", height="2" fill="black" />
+                <rect x="84.5" y="38" width="1", height="2" fill="black" />
+                <rect x="87 " y="38" width="1", height="2" fill="black" />
+            </mask>
+            <rect x="80" y="40" width="10", height="47" style="stroke: none; fill:#fff;"/>
+            <rect x="81" y="36" width="8", height="5" style="stroke: none; fill:#fff;" mask="url(#myMask)"/>
+        </g>
+
+        <!-- TransAmerica Tower -->
+        <g class="building" >
+            <rect x="60" y="40" width="10", height="18" style="stroke: none; fill:lightgrey;"/> -->
+
+            <mask id="transMask">
+                <!-- Everything under a black pixel will be invisible -->
+                <!-- <path stroke="black" stroke-width="10" d="M60,95 60,40" stroke-dasharray="2,4"/> -->
+                <path stroke="white" stroke-width="30" d="M60,95 60,40" stroke-dasharray="1,2"/>
+                
+            </mask>
+            <polygon points="65,24 55,90 75,90" style="stroke: none; fill:#999;" class="triangle" />
+            <polygon points="65,24 55,90 75,90" style="stroke: none; fill:#777;" class="triangle" mask="url(#transMask)"/>
+
+            <rect x="63" y="40" width="4", height="18" style="stroke: none; fill:lightgrey;"/> -->
+        </g>
+
+        <g class="building" >
+            <rect x="55" y="60" width="14", height="27" style="stroke: none; fill:orange;"/>
+        </g>
+
+
+
+        <g class="building" >
+            <rect x="85" y="55" width="10", height="42" style="stroke: none; fill:cyan;"/>
+        </g>
+        <g class="building" >
+            <rect x="15" y="55" width="15", height="32" style="stroke: none; fill:purple;"/>
+        </g>
+
+        <g class="building" >
+            <rect x="5" y="65" width="20", height="22" style="stroke: none; fill:blue;"/>
+        </g>
+
+        <g class="building" >
+            <rect x="35" y="65" width="16", height="25" style="stroke: none; fill:cadetblue;"/>
+        </g>
+
+        <g class="building" >
+            <rect x="60" y="70" width="22", height="23" style="stroke: none; fill:darkslateblue;"/>
+            <rect x="62" y="66" width="14", height="23" style="stroke: none; fill:darkslateblue;"/>
+        </g>
+
+        <g class="treeLayer">
+
+        </g>
+
+        <g id="ground">
+            <rect id="curb" x="0" y="87" width="100", height="3", style="fill:#333;"/>
+            <rect id="gutter" x="0" y="89" width="100", height="1", style="fill:#555;"/>
+
+            <rect id="street" x="0" y="90" width="100", height="17", style="fill:#222;"/>
+            <path stroke="yellow" d="M0,95 100,95" stroke-dasharray="2,4"/>
+        </g>
+
+        <g class="car">
+            
+            <rect x="100" y="90" width="8", height="2" style="stroke: none; fill:red;"/>
+            <rect x="102" y="88" width="5", height="2" style="stroke: none; fill:red;"/>
+            <rect x="102" y="88" width="2", height="2" style="stroke: none; fill:blue;"/>
+            <rect x="106" y="88" width="1", height="2" style="stroke: none; fill:blue;"/>
+            
+            <circle cx="102" cy="92" r="1" style="stroke: none; fill:black;"/>
+            <circle cx="102" cy="92" r=".5" style="stroke: none; fill:grey;"/>
+            <circle cx="106" cy="92" r="1" style="stroke: none; fill:black;"/>
+            <circle cx="106" cy="92" r=".5" style="stroke: none; fill:grey;"/>
+        </g>
+
+        <rect x="45" y="80" width="10" height="10" id="play_btn"
+          style="stroke: #000000; fill:#000000; opacity: 0.2;"/> 
+    </svg>
+
+    <!-- <input id="slider" type="range" min="0" max="100" step="10" oninput="sliderChange(this.value)"> -->
+    <script src="anime.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
