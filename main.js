@@ -72,7 +72,7 @@ function drawTrees(amount_of_trees){
     for (i = 0; i < amount_of_trees; i++) {
         xPos = i*5+ (Math.floor(Math.random() * jitter*2) - jitter);
 
-        make_tree('g.treeLayer', xPos, 87, 3);
+        // make_tree('g.treeLayer', xPos, 87, 3);
     }
 }
 
