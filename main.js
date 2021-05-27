@@ -63,7 +63,7 @@ var svg = document.getElementsByTagName('svg')[0]; //Get svg element
 //     drawTrees(val)
 // }
 
-drawTrees(20)
+drawTrees(21)
 
 function drawTrees(amount_of_trees){
     console.log("Amount of Trees:", amount_of_trees)
@@ -78,29 +78,9 @@ function drawTrees(amount_of_trees){
     for (i = 0; i < amount_of_trees; i++) {
         xPos = i*5+ (Math.floor(Math.random() * jitter*2) - jitter);
 
-        // Draw Tree Trunk
-        var newElement = document.createElementNS("http://www.w3.org/2000/svg", 'path'); //Create a path in SVG's namespace
-        newElement.setAttribute("d",`M${xPos},81 ${xPos},87`); //Set path's data
-        newElement.style.stroke = "#765c48"; //Set stroke colour
-        newElement.style.strokeWidth = "1px"; //Set stroke width
-        newElement.classList.add("tree");
-
-        // Draw Tree Top
-        var treeTop = document.createElementNS("http://www.w3.org/2000/svg", 'circle'); //Create a path in SVG's namespace
-        treeTop.setAttribute('cy', 80)
-        treeTop.setAttribute('cx', xPos)
-        treeTop.setAttribute('r', 3)
-        treeTop.style.fill = "green";
-        
-        tree_layer.appendChild(newElement);
-        tree_layer.appendChild(treeTop);
-
-        // tree_layer.parentNode.insertBefore(newElement, tree_layer);
-        // tree_layer.parentNode.insertBefore(treeTop, tree_layer);
+        make_tree('g.treeLayer', xPos, 87, 3);
     }
 }
-
-// (value - 0) * (y2 - x2) / (y1 - x1) + x2;    
 
 function removeElementsByClass(className){
     const elements = document.getElementsByClassName(className);
