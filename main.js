@@ -66,14 +66,8 @@ var svg = document.getElementsByTagName('svg')[0]; //Get svg element
 drawTrees(21)
 
 function drawTrees(amount_of_trees){
-    console.log("Amount of Trees:", amount_of_trees)
-
-    var tree_layer = document.querySelector('g.treeLayer')
-
     jitter = 2;
     xPos = 0;
-
-    removeElementsByClass("tree");
 
     for (i = 0; i < amount_of_trees; i++) {
         xPos = i*5+ (Math.floor(Math.random() * jitter*2) - jitter);
@@ -92,6 +86,17 @@ function removeElementsByClass(className){
 var moving_car = anime({
     targets: '.car',
     translateX: -110,
+    delay: function (el, i) { return i * 100; },
+    // direction: 'alternate',
+    duration: 10000,
+    loop: true,
+    autoplay: true,
+    easing: 'easeInOutSine'
+})
+
+var muni_bus = anime({
+    targets: '#muni_1',
+    translateX: [-50, -50, -150,-150,-220],
     delay: function (el, i) { return i * 100; },
     // direction: 'alternate',
     duration: 10000,

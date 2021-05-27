@@ -24,8 +24,7 @@ function make_tree(root_selector, cx, cy, r, new_group_id=''){
     }
     else
     {
-        console.log(`Creating container element with new_group_id: ${new_group_id}`)
-        // add id to element and create it
+        // console.log(`Creating container element with new_group_id: ${new_group_id}`)
         var new_group = document.createElementNS("http://www.w3.org/2000/svg", 'g'); 
         place_svg(root_selector, new_group, new_group_id)
 
@@ -33,4 +32,9 @@ function make_tree(root_selector, cx, cy, r, new_group_id=''){
         place_svg(new_group_selector, treeTrunk);
         place_svg(new_group_selector, treeTop);
     }
+}
+
+function make_muni(root_selector, cx, cy)
+{
+    
 }

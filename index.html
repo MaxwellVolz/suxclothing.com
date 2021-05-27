@@ -35,7 +35,7 @@
 
 <body>
     <!-- Content -->
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMid slice">
 
         <rect x="45" y="45" width="10" height="10" id="empty_rect"
           style="stroke: none; fill:none;"/>
@@ -59,14 +59,7 @@
         <g class="building" >
             <rect x="60" y="40" width="10", height="18" style="stroke: none; fill:lightgrey;"/> -->
 
-            <mask id="transMask">
-                <!-- Everything under a black pixel will be invisible -->
-                <!-- <path stroke="black" stroke-width="10" d="M60,95 60,40" stroke-dasharray="2,4"/> -->
-                <path stroke="white" stroke-width="30" d="M60,95 60,40" stroke-dasharray="1,2"/>
-                
-            </mask>
-            <polygon points="65,24 55,90 75,90" style="stroke: none; fill:#999;" class="triangle" />
-            <polygon points="65,24 55,90 75,90" style="stroke: none; fill:#777;" class="triangle" mask="url(#transMask)"/>
+           s
 
             <rect x="63" y="40" width="4", height="18" style="stroke: none; fill:lightgrey;"/> -->
         </g>
@@ -100,25 +93,79 @@
         </g>
 
         <g id="ground">
-            <rect id="curb" x="0" y="87" width="100", height="3", style="fill:#333;"/>
-            <rect id="gutter" x="0" y="89" width="100", height="1", style="fill:#555;"/>
+            <rect id="curb" x="-100" y="87" width="300", height="3", style="fill:#333;"/>
+            <rect id="gutter" x="-100" y="89" width="300", height="1", style="fill:#555;"/>
 
-            <rect id="street" x="0" y="90" width="100", height="17", style="fill:#222;"/>
-            <path stroke="yellow" d="M0,95 100,95" stroke-dasharray="2,4"/>
+            <rect id="street" x="-100" y="90" width="300", height="17", style="fill:#222;"/>
+            <path stroke="yellow" d="M-100,97 300,97" stroke-dasharray="2,4"/>
         </g>
 
         <g class="car">
             
-            <rect x="100" y="90" width="8", height="2" style="stroke: none; fill:red;"/>
-            <rect x="102" y="88" width="5", height="2" style="stroke: none; fill:red;"/>
-            <rect x="102" y="88" width="2", height="2" style="stroke: none; fill:blue;"/>
-            <rect x="106" y="88" width="1", height="2" style="stroke: none; fill:blue;"/>
+            <rect x="100" y="90" width="8" height="2" style="stroke: none; fill:red;"/>
+            <rect x="102" y="88" width="5" height="2" style="stroke: none; fill:red;"/>
+            <rect x="102" y="88" width="2" height="2" style="stroke: none; fill:blue;"/>
+            <rect x="106" y="88" width="1" height="2" style="stroke: none; fill:blue;"/>
             
             <circle cx="102" cy="92" r="1" style="stroke: none; fill:black;"/>
             <circle cx="102" cy="92" r=".5" style="stroke: none; fill:grey;"/>
             <circle cx="106" cy="92" r="1" style="stroke: none; fill:black;"/>
             <circle cx="106" cy="92" r=".5" style="stroke: none; fill:grey;"/>
         </g>
+
+        <use id="muni_1" href="#muni_bus" x="100" y="-4"/>
+
+        <mask id="muni_window_mask">
+            <!-- anti-mask -->
+            <rect x="46" y="90" rx=".25" width="30" height="10" style="fill:white;" />
+
+            <!-- windows -->
+            <rect x="52.5" y="92.5" rx=".25" width="4" height="3" style="fill:black;" />
+            <rect x="57" y="92.5" rx=".25" width="5.5" height="3" style="fill:black;" />
+            <rect x="67.5" y="92.5" rx=".25" width="4" height="3" style="fill:black;" />
+            <rect x="72" y="92.5" rx=".25" width="3" height="3" style="fill:black;" />
+
+            <!-- doors -->
+            <rect x="49.5" y="92.5" rx=".25" width="2" height="3" style="fill:black;" stroke="white" stroke-width=".1"/>
+            <rect x="63" y="92.5" rx=".25" width="4" height="4" style="fill:black;" stroke="white" stroke-width=".1"/>
+        </mask>
+
+        <g class="muni_bus" id="muni_bus" mask="url(#muni_window_mask)">
+            <!-- main -->
+            <rect x="50" y="90" rx="1" width="26" height="4" style="fill:grey;" />
+            <rect x="48" y="91" rx="1" width="30" height="7" style="fill:grey;" />
+            <rect x="48" y="91" rx=".25" width="26.5" height="1" style="fill:red;" />
+            <rect x="49.5" y="97" rx=".5" width="28.5" height="1" style="fill:red;" />
+
+            <!-- front -->
+            <rect x="48" y="91.5" rx=".25" width="1" height="4" style="fill:rgb(42, 42, 42);" />
+            <rect x="48" y="91" rx=".25" width="1" height="1" style="fill:black;" />
+            <rect x="48" y="96" rx=".25" width="1" height=".5" style="fill:white;" />
+            <rect x="47.5" y="97" rx=".25" width="1" height="1" style="fill:black;" />
+
+            <!-- wheels -->
+            <circle cx="54" cy="97.5" r="1.5" style="fill:black;"/>
+            <circle cx="54" cy="97.5" r="1" stroke="grey" stroke-width=".2" style="fill:rgb(42, 42, 42);"/>
+            <circle cx="69" cy="97.5" r="1.5" style="fill:black;"/>
+            <circle cx="69" cy="97.5" r="1" stroke="grey" stroke-width=".2" style="fill:rgb(42, 42, 42);"/>
+
+            <!-- windows -->
+            <rect x="52.5" y="92.5" rx=".25" width="4" height="3" stroke="white" stroke-width=".1" style="fill:rgb(42, 42, 42);" />
+            <rect x="57" y="92.5" rx=".25" width="5.5" height="3" stroke="white" stroke-width=".1" style="fill:rgb(42, 42, 42);" />
+            <rect x="67.5" y="92.5" rx=".25" width="4" height="3" stroke="white" stroke-width=".1" style="fill:rgb(42, 42, 42);" />
+            <rect x="72" y="92.5" rx=".25" width="3" height="3" stroke="white" stroke-width=".1" style="fill:rgb(42, 42, 42);" />
+
+            <!-- doors -->
+            <rect x="49.5" y="92.5" rx=".25" width="2" height="5.5" stroke="white" stroke-width=".1" />
+            <rect x="63" y="92.5" rx=".25" width="4" height="5.5" stroke="white" stroke-width=".1"/>
+
+            <!-- decals -->
+            <rect x="56" y="96" rx=".25" width="1" height=".75" style="fill:red;" />
+            <rect x="71" y="96" rx=".25" width="1" height=".75" style="fill:red;" />
+            <rect x="75" y="91" width="1" height="1" style="fill:rgb(42, 42, 42);" />
+
+        </g>
+
 
         <rect x="45" y="80" width="10" height="10" id="play_btn"
           style="stroke: #000000; fill:#000000; opacity: 0.2;"/> 
