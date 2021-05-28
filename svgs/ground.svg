@@ -1,0 +1,11 @@
+<!-- <svg viewBox="0 0 100 100"> -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+
+    <g id="ground">
+        <rect id="curb" x="-100" y="87" width="300", height="3", style="fill:#333;"/>
+        <rect id="gutter" x="-100" y="89" width="300", height="1", style="fill:#555;"/>
+
+        <rect id="street" x="-100" y="90" width="300", height="17", style="fill:#222;"/>
+        <path stroke="yellow" d="M-100,97 300,97" stroke-dasharray="2,4"/>
+    </g>
+</svg>

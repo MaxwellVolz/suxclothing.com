@@ -18,7 +18,7 @@ function make_tree(root_selector, cx, cy, r, new_group_id=''){
 
     // palce_svg should take third param as optional, check for/make container element
     if(new_group_id == '')
-    {
+    {*
         place_svg(root_selector, treeTrunk);
         place_svg(root_selector, treeTop);
     }
@@ -35,6 +35,11 @@ function make_tree(root_selector, cx, cy, r, new_group_id=''){
 }
 
 function make_muni(root_selector, cx, cy)
+{
+
+}
+
+function make_generic_building(root_selector, x, y, height, width, amount_of_windows)
 {
     
 }

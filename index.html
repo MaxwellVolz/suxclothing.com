@@ -26,16 +26,19 @@
     <meta property="og:url" content="https://www.mywebsite.com/page">
     <link rel="canonical" href="https://www.mywebsite.com/page">
 
-    <link rel="icon" href="/favicon.ico">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/my.webmanifest">
+    <!-- hot reload -->
+    <script type="text/javascript" src="live.js"></script>
+
+    <!-- <link rel="icon" href="/favicon.ico"> -->
+    <!-- <link rel="icon" href="/favicon.svg" type="image/svg+xml"> -->
+    <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+    <!-- <link rel="manifest" href="/my.webmanifest"> -->
     <meta name="theme-color" content="#FF00FF">
 </head>
 
 <body>
     <!-- Content -->
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMid slice">
+    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100">
 
         <rect x="45" y="45" width="10" height="10" id="empty_rect"
           style="stroke: none; fill:none;"/>
@@ -71,29 +74,56 @@
             <rect x="63" y="40" width="4", height="18" style="stroke: none; fill:lightgrey;"/> -->
         </g>
 
-        <!-- <g class="building" >
-            <rect x="55" y="60" width="14", height="27" style="stroke: none; fill:orange;"/>
-        </g>
+        <g class="city_hall" transform="translate(3,64)">
+            <!-- base -->
+            <rect x="1.5" y="10" width="47" height="14" style="fill:#999;"/>
+            <rect x="1.5" y="11" width="47" height="1" style="fill:orange;"/>
+            <rect x="0" y="18" width="50" height="6" style="fill:#666;"/>
+            <rect x="18" y="10" width="14" height="8" style="fill:#888;"/>
 
-        <g class="building" >
-            <rect x="85" y="55" width="10", height="42" style="stroke: none; fill:cyan;"/>
-        </g>
-        <g class="building" >
-            <rect x="15" y="55" width="15", height="32" style="stroke: none; fill:purple;"/>
-        </g>
+            <!-- top -->
+            <rect x="18" y="8" width="14" height="2" style="fill:#777;"/>
+            <!-- <rect x="23" y="-10" width="4" height="4" style="fill:orange;"/> -->
+            <rect x="24" y="-8" width="2" height="2" style="fill:orange;"/>
+            <rect x="24.5" y="-10" width="1" height="2" style="fill:gold;"/>
+            <rect x="24.75" y="-12" width=".5" height="2" style="fill:gold;"/>
+            <rect x="23.5" y="-6" width="3" height="2" style="fill:#666;"/>
+            
+            <circle cx="25" cy="0" r="5" style="fill:#999;"/>
+            <rect x="19" y="2" width="12" height="6" style="fill:#999;"/>
+            <rect x="19" y="2" width="12" height="1" style="fill:orange;"/>
+            <rect x="19" y="7" width="12" height="1" style="fill:orange;"/>
+            <rect x="20" y="0" width="10" height="2" style="fill:#666;"/>
 
-        <g class="building" >
-            <rect x="5" y="65" width="20", height="22" style="stroke: none; fill:blue;"/>
-        </g>
+            <!-- front deco -->
+            <polygon points="19,10 25,7 31,10" style="stroke:#333;stroke-width:.3;fill:#999;"/>
+            <rect x="19" y="10" width="12" height="1" style="fill:#999;"/>
 
-        <g class="building" >
-            <rect x="35" y="65" width="16", height="25" style="stroke: none; fill:cadetblue;"/>
-        </g>
+            <polygon points="1,13 5,11 9,13" style="stroke:#333;stroke-width:.3;fill:#888;"/>
+            <rect x="1" y="13" width="8" height="1" style="fill:#888;"/>
 
-        <g class="building" >
-            <rect x="60" y="70" width="22", height="23" style="stroke: none; fill:darkslateblue;"/>
-            <rect x="62" y="66" width="14", height="23" style="stroke: none; fill:darkslateblue;"/>
-        </g> -->
+            <polygon points="41,13 45,11 49,13" style="stroke:#333;stroke-width:.3;fill:#888;"/>
+            <rect x="41" y="13" width="8" height="1" style="fill:#888;"/>
+
+            <!-- pillars -->
+            <rect x="1" y="14" width=".5" height="4" style="fill:#fff;"/>
+            <rect x="2" y="14" width=".5" height="4" style="fill:#fff;"/>
+            <rect x="7.5" y="14" width=".5" height="4" style="fill:#fff;"/>
+            <rect x="8.5" y="14" width=".5" height="4" style="fill:#fff;"/>
+
+            <rect x="19" y="11" width=".5" height="7" style="fill:#fff;"/>
+            <rect x="20" y="11" width=".5" height="7" style="fill:#fff;"/>
+            <rect x="23" y="11" width=".5" height="7" style="fill:#fff;"/>
+            <rect x="26.5" y="11" width=".5" height="7" style="fill:#fff;"/>
+            <rect x="29.5" y="11" width=".5" height="7" style="fill:#fff;"/>
+            <rect x="30.5" y="11" width=".5" height="7" style="fill:#fff;"/>
+
+            <rect x="41" y="14" width=".5" height="4" style="fill:#fff;"/>
+            <rect x="42" y="14" width=".5" height="4" style="fill:#fff;"/>
+            <rect x="47.5" y="14" width=".5" height="4" style="fill:#fff;"/>
+            <rect x="48.5" y="14" width=".5" height="4" style="fill:#fff;"/>
+            <!-- windows -->
+        </g>
 
         <g class="treeLayer">
 
@@ -106,21 +136,22 @@
             <rect id="street" x="-100" y="90" width="300", height="17", style="fill:#222;"/>
             <path stroke="yellow" d="M-100,97 300,97" stroke-dasharray="2,4"/>
         </g>
+        <!-- <use xlink:href="ground.svg#ground"></use> -->
+        <use xlink:href="/svgs/ground.svg"></use>
 
-        <g class="car">
+
+
+        <g class="building" transform="translate(20,20)">
+            <rect x="0" y="35" width="24" height="32" style="fill:#333;" />
             
-            <rect x="100" y="90" width="8" height="2" style="stroke: none; fill:red;"/>
-            <rect x="102" y="88" width="5" height="2" style="stroke: none; fill:red;"/>
-            <rect x="102" y="88" width="2" height="2" style="stroke: none; fill:blue;"/>
-            <rect x="106" y="88" width="1" height="2" style="stroke: none; fill:blue;"/>
-            
-            <circle cx="102" cy="92" r="1" style="stroke: none; fill:black;"/>
-            <circle cx="102" cy="92" r=".5" style="stroke: none; fill:grey;"/>
-            <circle cx="106" cy="92" r="1" style="stroke: none; fill:black;"/>
-            <circle cx="106" cy="92" r=".5" style="stroke: none; fill:grey;"/>
+
+            <g id="window_row">
+
+            </g>
         </g>
+        
 
-        <use id="muni_1" href="#muni_bus" x="100" y="-4"/>
+        <use id="muni_1" href="#muni_bus" x="100" y="-4" />
 
         <mask id="muni_window_mask">
             <!-- anti-mask -->
@@ -173,9 +204,17 @@
 
         </g>
 
-
         <rect x="45" y="80" width="10" height="10" id="play_btn"
           style="stroke: #000000; fill:#000000; opacity: 0.2;"/> 
+
+        <!-- Templates -->
+
+        <!-- new group -->
+        <!-- <g class="" id="" transform="translate(20,20)">
+            <rect x="0" y="0" width="5" height="5" style="fill:red;" />
+            <circle cx="0" cy="0" r="5" style="fill:red;" />
+            <path stroke="yellow" d="M-100,97 300,97" stroke-dasharray="2,4"/>
+        </g> -->
     </svg>
 
     <!-- <input id="slider" type="range" min="0" max="100" step="10" oninput="sliderChange(this.value)"> -->
@@ -185,6 +224,7 @@
     <script src="svgs.js"></script>
 
     <script src="main.js"></script>
+
 
 </body>
 

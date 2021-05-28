@@ -83,17 +83,6 @@ function removeElementsByClass(className){
     }
 }
 
-var moving_car = anime({
-    targets: '.car',
-    translateX: -110,
-    delay: function (el, i) { return i * 100; },
-    // direction: 'alternate',
-    duration: 10000,
-    loop: true,
-    autoplay: true,
-    easing: 'easeInOutSine'
-})
-
 var muni_bus = anime({
     targets: '#muni_1',
     translateX: [-50, -50, -150,-150,-220],
