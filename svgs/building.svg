@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <defs>
+        <g class="building" id="generic_building" transform="translate(31,55)">
+            <rect x="0" y="0" width="24" height="32" style="fill:#333;" />
+            <rect x="5" y="-2" width="10" height="3" style="fill:#333;" />
+            <rect x="17" y="-1" width="2" height="1" style="fill:#333;" />
+            <circle cx="18" cy="-1" r="1" style="fill:#333;"  />
+
+            <g id="window_row">
+                <rect class="window" x="1" y="1" width="4" height="4" style="fill:rgb(117, 117, 231);"/>
+                <rect class="window" x="6" y="1" width="5.5" height="4" style="fill:rgb(117, 117, 231);"/>
+                <rect class="window" x="12.5" y="1" width="5.5" height="4" style="fill:rgb(117, 117, 231);"/>
+                <rect class="window" x="19" y="1" width="4" height="4" style="fill:rgb(117, 117, 231);"/>
+            </g>
+
+            <use href="#window_row" transform="translate(0,5)" />
+            <use href="#window_row" transform="translate(0,10)" />
+            <use href="#window_row" transform="translate(0,15)" />
+            <use href="#window_row" transform="translate(0,20)" />
+
+            <rect class="window" x="1" y="26" width="8" height="4" style="fill:rgb(117, 117, 231);"/>
+            <rect class="door" x="10" y="26" width="4" height="6" style="fill:rgb(90, 38, 3);"/>
+            <rect class="window" x="15" y="26" width="8" height="4" style="fill:rgb(117, 117, 231);"/>
+
+        </g>
+
+        <g class="building" id="tall_building" transform="translate(20,35)">
+            <rect x="0" y="0" width="24" height="52" style="fill:rgb(35, 42, 38);" />
+            <rect x="12" y="-2" width="10" height="3" style="fill:rgb(35, 42, 38);" />
+            <rect x="4" y="-1" width="2" height="2" style="fill:rgb(35, 42, 38);" />
+            <circle cx="5" cy="-1" r="1" style="fill:#333;"  />
+
+            <g id="window_row_1">
+                <rect class="window" x="1" y="1" width="3" height="3" style="fill:rgb(63, 73, 124);"/>
+                <rect class="window" x="5" y="1" width="3" height="3" style="fill:rgb(63, 73, 124);"/>
+                <rect class="window" x="9" y="1" width="6" height="3" style="fill:rgb(63, 73, 124);"/>
+                <rect class="window" x="16" y="1" width="3" height="3" style="fill:rgb(63, 73, 124);"/>
+                <rect class="window" x="20" y="1" width="3" height="3" style="fill:rgb(63, 73, 124);"/>
+            </g>
+            <use href="#window_row_1" transform="translate(0,4)" />
+            <use href="#window_row_1" transform="translate(0,8)" />
+            <use href="#window_row_1" transform="translate(0,12)" />
+            <use href="#window_row_1" transform="translate(0,16)" />
+            <use href="#window_row_1" transform="translate(0,20)" />
+            <use href="#window_row_1" transform="translate(0,24)" />
+            <use href="#window_row_1" transform="translate(0,28)" />
+            <use href="#window_row_1" transform="translate(0,32)" />
+            <use href="#window_row_1" transform="translate(0,36)" />
+
+        </g>
+
+        <g class="building" id="generic_building2" transform="translate(31,55)">
+            <rect x="0" y="0" width="24" height="32" style="fill:#333;" />
+            <rect x="5" y="-2" width="10" height="2" style="fill:#333;" />
+            <rect x="17" y="-1" width="2" height="1" style="fill:#333;" />
+            <circle cx="18" cy="-1" r="1" style="fill:#333;"  />
+
+            <g id="window_row">
+                <rect class="window" x="1" y="1" width="4" height="4" style="fill:rgb(117, 117, 131);"/>
+                <rect class="window" x="6" y="1" width="5.5" height="4" style="fill:rgb(117, 117, 131);"/>
+                <rect class="window" x="12.5" y="1" width="5.5" height="4" style="fill:rgb(117, 117, 131);"/>
+                <rect class="window" x="19" y="1" width="4" height="4" style="fill:rgb(117, 117, 131);"/>
+            </g>
+
+            <use href="#window_row" transform="translate(0,5)" />
+            <use href="#window_row" transform="translate(0,10)" />
+            <use href="#window_row" transform="translate(0,15)" />
+            <use href="#window_row" transform="translate(0,20)" />
+
+            <rect class="window" x="1" y="26" width="8" height="4" style="fill:rgb(117, 117, 231);"/>
+            <rect class="door" x="10" y="26" width="4" height="6" style="fill:rgb(90, 38, 3);"/>
+            <rect class="window" x="15" y="26" width="8" height="4" style="fill:rgb(117, 117, 231);"/>
+
+        </g>
+
+        <g id="city_hall" transform="translate(3,64)">
+            <!-- base -->
+            <rect x="1.5" y="10" width="47" height="14" style="fill:#999;"/>
+            <rect x="1.5" y="11" width="47" height="1" style="fill:orange;"/>
+            <rect x="0" y="18" width="50" height="6" style="fill:#666;"/>
+            <rect x="18" y="10" width="14" height="8" style="fill:#888;"/>
+
+            <!-- top -->
+            <rect x="18" y="8" width="14" height="2" style="fill:#777;"/>
+            <!-- <rect x="23" y="-10" width="4" height="4" style="fill:orange;"/> -->
+            <rect x="24" y="-8" width="2" height="2" style="fill:orange;"/>
+            <rect x="24.5" y="-10" width="1" height="2" style="fill:gold;"/>
+            <rect x="24.75" y="-12" width=".5" height="2" style="fill:gold;"/>
+            <rect x="23.5" y="-6" width="3" height="2" style="fill:#666;"/>
+            
+            <circle cx="25" cy="0" r="5" style="fill:#999;"/>
+            <rect x="19" y="2" width="12" height="6" style="fill:#999;"/>
+            <rect x="19" y="2" width="12" height="1" style="fill:orange;"/>
+            <rect x="19" y="7" width="12" height="1" style="fill:orange;"/>
+            <rect x="20" y="0" width="10" height="2" style="fill:#666;"/>
+
+            <!-- front deco -->
+            <polygon points="19,10 25,7 31,10" style="stroke:#333;stroke-width:.3;fill:#999;"/>
+            <rect x="19" y="10" width="12" height="1" style="fill:#999;"/>
+
+            <polygon points="1,13 5,11 9,13" style="stroke:#333;stroke-width:.3;fill:#888;"/>
+            <rect x="1" y="13" width="8" height="1" style="fill:#888;"/>
+
+            <polygon points="41,13 45,11 49,13" style="stroke:#333;stroke-width:.3;fill:#888;"/>
+            <rect x="41" y="13" width="8" height="1" style="fill:#888;"/>
+
+            <!-- pillars -->
+            <rect x="1" y="14" width=".5" height="4" style="fill:#fff;"/>
+            <rect x="2" y="14" width=".5" height="4" style="fill:#fff;"/>
+            <rect x="7.5" y="14" width=".5" height="4" style="fill:#fff;"/>
+            <rect x="8.5" y="14" width=".5" height="4" style="fill:#fff;"/>
+
+            <rect x="19" y="11" width=".5" height="7" style="fill:#fff;"/>
+            <rect x="20" y="11" width=".5" height="7" style="fill:#fff;"/>
+            <rect x="23" y="11" width=".5" height="7" style="fill:#fff;"/>
+            <rect x="26.5" y="11" width=".5" height="7" style="fill:#fff;"/>
+            <rect x="29.5" y="11" width=".5" height="7" style="fill:#fff;"/>
+            <rect x="30.5" y="11" width=".5" height="7" style="fill:#fff;"/>
+
+            <rect x="41" y="14" width=".5" height="4" style="fill:#fff;"/>
+            <rect x="42" y="14" width=".5" height="4" style="fill:#fff;"/>
+            <rect x="47.5" y="14" width=".5" height="4" style="fill:#fff;"/>
+            <rect x="48.5" y="14" width=".5" height="4" style="fill:#fff;"/>
+            <!-- windows -->
+        </g>
+
+         <g id="coit_tower" class="building" transform="translate(13,-20)" >
+            <mask id="myMask">
+                <!-- Everything under a black pixel will be invisible -->
+                <rect x="81" y="35" width="8", height="5" fill="white" />
+                <rect x="82" y="38" width="1", height="2" fill="black" />
+                <rect x="84.5" y="38" width="1", height="2" fill="black" />
+                <rect x="87 " y="38" width="1", height="2" fill="black" />
+            </mask>
+            <rect x="80" y="40" width="10", height="47" style="stroke: none; fill:#fff;"/>
+            <rect x="81" y="36" width="8", height="5" style="stroke: none; fill:#fff;" mask="url(#myMask)"/>
+        </g>
+
+        <g class="building" id="transamerica"  transform="translate(0,0)">>
+            <rect x="60" y="40" width="10", height="18" style="stroke: none; fill:lightgrey;"/> -->
+
+            <mask id="transMask">
+                <!-- Everything under a black pixel will be invisible -->
+                <!-- <path stroke="black" stroke-width="10" d="M60,95 60,40" stroke-dasharray="2,4"/> -->
+                <path stroke="white" stroke-width="30" d="M60,95 60,40" stroke-dasharray="1,2"/>
+
+            </mask>
+            <polygon points="65,24 55,90 75,90" style="stroke: none; fill:#999;" class="triangle" />
+            <polygon points="65,24 55,90 75,90" style="stroke: none; fill:#777;" class="triangle" mask="url(#transMask)"/>
+
+            <rect x="63" y="40" width="4", height="18" style="stroke: none; fill:lightgrey;"/> -->
+        </g>
+
+        
+
+        
+
+
+    </defs>
+</svg>
