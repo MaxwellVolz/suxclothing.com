@@ -29,31 +29,57 @@
     <link rel="icon" href="/favicon.ico">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/my.webmanifest">
+    <!-- <link rel="manifest" href="/my.webmanifest"> -->
     <meta name="theme-color" content="#FF00FF">
 </head>
 
 <body>
     <!-- Content -->
     <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+        <g id="sky_box">
+            <rect x="0" y="0" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="5" width="100" height="6" style="fill:rgb(225,248,255);"/>
+
+            <rect x="0" y="10" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="15" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="20" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="25" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="30" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="35" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="40" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="45" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="50" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="55" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="60" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="65" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="70" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="75" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="80" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="85" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="90" width="100" height="6" style="fill:rgb(225,248,255);"/>
+            <rect x="0" y="95" width="100" height="6" style="fill:rgb(225,248,255);"/>
+        </g>
+
+        <defs>
+			<filter id="glow" x="-200%" y="-200%" height="500%" width="500%">
+				<fegaussianblur class="blur" result="coloredBlur" stddeviation="1"></fegaussianblur>
+				<femerge>
+					<femergenode in="coloredBlur"></femergenode>
+                    <femergenode in="coloredBlur"></femergenode>
+                    <femergenode in="coloredBlur"></femergenode>
+                    <femergenode in="SourceGraphic"></femergenode>
+				</femerge>
+			</filter>
+		</defs>
+
+        <g transform="translate(40,40)">
+            <rect x="0" y="0" width="20" height="10" rx="2.5" style="overflow: visible; fill-opacity: 0; stroke-width: 2; stroke: red; filter: url(#glow);"/>
+        </g>
+
 
         <g class="billboard" transform="translate(20,20)">
             <!-- Main -->
-            <rect x="0" y="0" width="20" height="8" rx="2" style="stroke: none; fill:red;"/>
-
-            <defs>
-                <!-- <filter id="bright" x="-1" y="-1" width="2" height="2" style="color-interpolation-filters:sRGB">
-                    <feGaussianBlur stdDeviation="2"/>
-                </filter> -->
-
-                <filter id="bright" x="0" y="0" width=".1" height=".1" style="color-interpolation-filters:sRGB">
-                    <feGaussianBlur stdDeviation="2"/>
-                   </filter>
-
-                <filter id="light" x="-.59552" y="-.53349" width="2.191" height="2.067" style="color-interpolation-filters:sRGB">
-                    <feGaussianBlur stdDeviation="2.3"/>
-                </filter>
-            </defs>
+            <rect x="-.5" y="0" width="21" height="9" rx="2.5" style="stroke: none; fill:red;"/>
 
             <!-- Lights -->
             <g id="bulbs" transform="translate(1,0)">
@@ -68,54 +94,63 @@
                 <circle cx="15" cy="1" r=".5" style="fill:#999;"/>
                 <circle cx="17" cy="1" r=".5" style="fill:#999;"/>
 
-                <circle cx="18" cy="2" r=".5" style="fill:#999;"/>
-                <circle cx="18" cy="4" r=".5" style="fill:#999;"/>
-                <circle cx="18" cy="6" r=".5" style="fill:#999;"/>
+                <circle cx="18.5" cy="2.5" r=".5" style="fill:#999;"/>
+                <circle cx="18.5" cy="4.5" r=".5" style="fill:#999;"/>
+                <circle cx="18.5" cy="6.5" r=".5" style="fill:#999;"/>
 
-                <circle cx="17" cy="7" r=".5" style="fill:#999;"/>
-                <circle cx="15" cy="7" r=".5" style="fill:#999;"/>
-                <circle cx="13" cy="7" r=".5" style="fill:#999;"/>
-                <circle cx="11" cy="7" r=".5" style="fill:#999;"/>
-                <circle cx="9" cy="7" r=".5" style="fill:#999;"/>
-                <circle cx="7" cy="7" r=".5" style="fill:#999;"/>
-                <circle cx="5" cy="7" r=".5" style="fill:#999;"/>
-                <circle cx="3" cy="7" r=".5" style="fill:#999;"/>
-                <circle cx="1" cy="7" r=".5" style="fill:#999;"/>
+                <circle cx="17" cy="8" r=".5" style="fill:#999;"/>
+                <circle cx="15" cy="8" r=".5" style="fill:#999;"/>
+                <circle cx="13" cy="8" r=".5" style="fill:#999;"/>
+                <circle cx="11" cy="8" r=".5" style="fill:#999;"/>
+                <circle cx="9" cy="8" r=".5" style="fill:#999;"/>
+                <circle cx="7" cy="8" r=".5" style="fill:#999;"/>
+                <circle cx="5" cy="8" r=".5" style="fill:#999;"/>
+                <circle cx="3" cy="8" r=".5" style="fill:#999;"/>
+                <circle cx="1" cy="8" r=".5" style="fill:#999;"/>
                 
-                <circle cx="0" cy="6" r=".5" style="fill:#999;"/>
-                <circle cx="0" cy="4" r=".5" style="fill:#999;"/>
-                <circle cx="0" cy="2" r=".5" style="fill:#999;"/>
+                <circle cx="-.5" cy="6.5" r=".5" style="fill:#999;"/>
+                <circle cx="-.5" cy="4.5" r=".5" style="fill:#999;"/>
+                <circle cx="-.5" cy="2.5" r=".5" style="fill:#999;"/>
             </g>
 
+            <defs>
+                <filter id="light" x="-.5" y="-.5" width="1" height="1" style="color-interpolation-filters:sRGB">
+                    <feGaussianBlur stdDeviation="1"/>
+               </filter>
+            </defs>
+
             <g id="lights" transform="translate(1,0)">
-                <circle cx="1" cy="1" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <!-- <circle cx="2" cy="1" r=".2" style="opacity:0; fill:black;"/> -->
-                <circle cx="3" cy="1" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="5" cy="1" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="7" cy="1" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="9" cy="1" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="11" cy="1" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="13" cy="1" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="15" cy="1" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="17" cy="1" r=".2" style="opacity:0; fill:#999; opacity:0"/>
+              
 
-                <circle cx="18" cy="2" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="18" cy="4" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="18" cy="6" r=".2" style="opacity:0; fill:#999; opacity:0"/>
+                <!-- <circle cx="1" cy="1" r=".2" fill="yellow" style="opacity:0" filter="url(#light)"/> -->
+                <circle cx="1" cy="1" r=".2" fill="yellow" style="filter: url(#glow); opacity:0" />
+                <!-- <circle cx="2" cy="1" r=".2" style="filter: url(#glow); opacity:0; fill:black;"/> -->
+                <circle cx="3" cy="1" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="5" cy="1" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="7" cy="1" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="9" cy="1" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="11" cy="1" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="13" cy="1" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="15" cy="1" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="17" cy="1" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
 
-                <circle cx="17" cy="7" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="15" cy="7" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="13" cy="7" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="11" cy="7" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="9" cy="7" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="7" cy="7" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="5" cy="7" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="3" cy="7" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="1" cy="7" r=".2" style="opacity:0; fill:#999; opacity:0"/>
+                <circle cx="18.5" cy="2.5" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="18.5" cy="4.5" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="18.5" cy="6.5" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+
+                <circle cx="17" cy="8" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="15" cy="8" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="13" cy="8" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="11" cy="8" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="9" cy="8" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="7" cy="8" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="5" cy="8" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="3" cy="8" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="1" cy="8" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
                 
-                <circle cx="0" cy="6" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="0" cy="4" r=".2" style="opacity:0; fill:#999; opacity:0"/>
-                <circle cx="0" cy="2" r=".2" style="opacity:0; fill:#999; opacity:0"/>
+                <circle cx="-.5" cy="6.5" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="-.5" cy="4.5" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
+                <circle cx="-.5" cy="2.5" r=".2" fill="#999" style="filter: url(#glow); opacity:0"/>
             </g>
 
             
