@@ -1,5 +1,11 @@
 window.onload = function () {
 
+    // fetch('https://api.coindesk.com/v1/bpi/historical/close.json')
+    // .then(res => res.json())
+    // .then((out) => {
+    //     console.log('Output: ', out);
+    // }).catch(err => console.error(err));
+
     var sky_box = document.querySelector('g#sky_box')
 
     // var timeline = anime.timeline({
@@ -75,7 +81,7 @@ window.onload = function () {
 
     tl.add({
         fill: '#FFF',
-        opacity: 1,
+        opacity: .8,
         r: .8
     })
         .add({
