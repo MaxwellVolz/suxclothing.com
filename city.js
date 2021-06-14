@@ -28,15 +28,62 @@ window.onload = function () {
         loop: true
     });
 
+    // enter station
     tl.add({
         targets: 'g#bart',
         translateX: -1748,
     })
 
+    // open doors
+    tl.add({
+        targets: 'g#bart > g > rect:first-child',
+        translateX: -20,
+        duration: 200,
+        easing: 'easeInQuad',
+
+    },'+=200')
+    tl.add({
+        targets: 'g#bart > g > rect:nth-child(2)',
+        translateX: 20,
+        duration: 200,
+        easing: 'easeInQuad',
+    },'-=200')
+
+    // close doors
+    tl.add({
+        targets: 'g#bart > g > rect:first-child',
+        translateX: 0,
+        duration: 400,
+        easing: 'easeOutQuad',
+    },'+=2000')
+    tl.add({
+        targets: 'g#bart > g > rect:nth-child(2)',
+        translateX: 0,
+        duration: 400,
+        easing: 'easeOutQuad',
+    },'-=400')
+
+    // exit station
     tl.add({
         translateX: -3500,
+        easing: 'easeInQuad',
+    },'+=1200')
+
+
+    // bg bart
+    var tl2 = anime.timeline({
+        targets: `g#bart_x5F_bg`,
         easing: 'easeOutQuad',
-    },'+=3000')
+        duration: 2000,
+        loop: true,
+        delay: 5000
+    });
+
+    // enter station
+    tl2.add({
+        translateX: -2050,
+    },'+=2500')
+
 
 
 };
