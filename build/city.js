@@ -83,6 +83,10 @@ window.onload = function () {
     tl2.add({
         translateX: -2050,
     },'+=2500')
+    tl2.add({
+        translateX: -5000,
+        easing: 'easeInQuad',
+    },'+=3500')
 
 
 

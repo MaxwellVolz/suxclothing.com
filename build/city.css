@@ -1,0 +1,43 @@
+html {
+	height: 100%;
+	width: 100%;
+}
+body { 
+	margin: 0;
+	position: relative;
+	background-color: #000;
+	/* background-image: url(starfield_stock_1.jpg); */
+	background-size:cover;
+	height: 100%;
+	width: 100%;
+
+
+}
+
+#muni_bus{
+	-webkit-backface-visibility: hidden;
+	-webkit-transform:translate3d(0,0,0);
+}
+
+#bart, #bart_x5F_bg{
+	-webkit-backface-visibility: hidden;
+	-webkit-transform:translate3d(0,0,0);
+}
+
+.building_2 > rect{
+	fill:#000;
+}
+
+svg
+{
+    min-width: 100%;
+}
+/* 
+
+g#lights > circle{
+	-webkit-filter: blur(1px);
+	-moz-filter: blur(1px);
+	-o-filter: blur(1px);
+	-ms-filter: blur(1px);
+	filter: blur(1px);
+} */

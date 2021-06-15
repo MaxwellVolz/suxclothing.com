@@ -1,0 +1,28 @@
+{
+  "name": "suxclothing.com",
+  "version": "1.0.0",
+  "description": "last place club",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaxwellVolz/suxclothing.com.git"
+  },
+  "author": "Maxwell Volz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaxwellVolz/suxclothing.com/issues"
+  },
+  "homepage": "https://github.com/MaxwellVolz/suxclothing.com#readme",
+  "dependencies": {
+    "gulp-cli": "^2.3.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-replace": "^1.1.3",
+    "gulp-serve": "^1.4.0",
+    "gulp-watch": "^5.0.1"
+  }
+}
