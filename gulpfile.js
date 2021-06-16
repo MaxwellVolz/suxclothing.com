@@ -37,15 +37,27 @@ function update_city(){
         file_path = svg_folder + file
 
 
-        console.log('REGEX replacing: ' + file)
+        console.log('REGEX replacing: ' + file + ' from: ' + file_path)
 
         var find_replace_regex = new RegExp(`(?<=\<!-- ${file} -->)((.|\n)*)(?=\<!-- \/${file} -->)`, 'g') 
 
         // get svg
-        var fileContent = fs.readFileSync(file_path);
-        var dataArr = fileContent.toString('utf8').split('xml:space="preserve">');  
-        var svg_inner = dataArr[1].split('</svg>')[0]
+        var fileContent = fs.readFileSync(file_path).toString('utf8');
 
+
+        var lines = fileContent.split('\n');
+        // remove one line, starting at the first position
+        lines.splice(0,4);
+        lines.pop()
+        lines.pop()
+        var svg_inner = lines.join('\n');
+        console.log(svg_inner)
+
+        // var dataArr = fileContent.toString('utf8').split('xml:space="preserve">');  
+        // var svg_inner = dataArr[1].split('</svg>')[0]
+
+        console.log(svg_inner)
+        
         new_city = new_city
             .pipe(replace(find_replace_regex, svg_inner))
             // .pipe(replace(/(?<=\<!-- city.svg -->)((.|\n)*)(?=\<!-- \/city.svg -->)/g, svg_inner))

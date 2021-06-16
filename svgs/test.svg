@@ -3,14 +3,18 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
 <style type="text/css">
-	
+	.st0{display:none;}
+	.st1{display:inline;}
+	.st2{fill:#ED1C24;}
 </style>
-<!-- sassy -->
 <g id="Layer_1">
-
-		
-    <rect x="1716" y="296" class="st0" width="288" height="660"/>
-		
+	<g id="Layer_1_1_">
+		<rect x="421.7" y="200" width="288" height="660"/>
+	</g>
 </g>
-
+<g id="Layer_2" class="st0">
+	<g id="Layer_1_2_" class="st1">
+		<rect x="920.7" y="200" class="st2" width="288" height="660"/>
+	</g>
+</g>
 </svg>
